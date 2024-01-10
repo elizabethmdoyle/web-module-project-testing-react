@@ -43,7 +43,7 @@ test('handleSelect is called when an season is selected', () => {
     const handleSelect = jest.fn();
     render(<Show show={testShow} selectedSeason={'none'} handleSelect={handleSelect}/>)
     const select = screen.queryByLabelText(/Select A Season/i);
-    userEvent.selectOptions(select, ['1']);
+        userEvent.selectOptions(select, ['1']);
 
     expect(handleSelect).toBeCalled();
  });
